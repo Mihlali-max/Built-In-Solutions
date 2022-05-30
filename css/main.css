@@ -19,6 +19,9 @@ html{
     text-rendering: optimizeLegibility;
     scroll-behavior: smooth;
 }
+.column{
+    column-count:1;
+}
 
 /* setup & reusable stylings */
 img{
@@ -124,6 +127,47 @@ section{
     font-weight: 400;
     opacity: 0.65;
     transition: var(--transition);
+}
+/* Float four columns side by side */
+.column {
+    float: left;
+    width: 25%;
+    padding: 0 10px;
+  }
+  
+  /* Remove extra left and right margins, due to padding */
+  .row {margin: 0 -5px;}
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive columns */
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+    }
+  }
+  
+  /* Style the counter cards */
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    text-align: center;
+    background-color: #f1f1f1;
+  }
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 .nav-link:hover{
     color: var(--mount-meadow)!important;
@@ -392,7 +436,7 @@ section{
 
 /* testimonial */
 .testimonial{
-    background-image: linear-gradient(rgba(27, 188, 156, 0.8), rgba(27, 188, 156, 0.9)), url(../assets/testimonial-bg.jpg);
+    background-image: linear-gradient(rgba(117, 115, 111, 0.816), rgb(75, 74, 73)), url(../assets/testimonial-bg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
